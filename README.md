@@ -26,10 +26,6 @@ Traefik dashboard is exposed by the helm install
 
 
 ```
-curl http://whoami-gatewayapi.localhost
-```
-
-```
 export GITHUB_REPO=flux-traefik-demo
 ```
 (also export token and user...)
@@ -43,4 +39,9 @@ flux bootstrap github \
     --branch=fluxcd \
     --personal \
     --path=clusters/staging
+```
+
+
+```
+curl http://whoami-gatewayapi.localhost
 ```
