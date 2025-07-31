@@ -24,11 +24,23 @@ kubectl describe GatewayClass traefik
 Traefik dashboard is exposed by the helm install
 [http://dashboard.localhost/dashboard/](http://dashboard.localhost/dashboard/)
 
-Apply apps/staging...
-```
-kubectl apply -k apps/staging/
-```
 
 ```
 curl http://whoami-gatewayapi.localhost
+```
+
+```
+export GITHUB_REPO=flux-traefik-demo
+```
+(also export token and user...)
+
+### Bootstrap Flux
+```
+flux bootstrap github \
+    --context=k3d-traefik-demo \
+    --owner=${GITHUB_USER} \
+    --repository=${GITHUB_REPO} \
+    --branch=fluxcd \
+    --personal \
+    --path=clusters/staging
 ```
