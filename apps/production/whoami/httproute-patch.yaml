@@ -4,4 +4,4 @@ metadata:
   name: whoamiv1
 spec:
   hostnames:
-    - "whoami-staging.localhost"
+    - "whoami.localhost"
