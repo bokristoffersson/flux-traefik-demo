@@ -24,8 +24,18 @@ kubectl describe GatewayClass traefik
 Traefik dashboard is exposed by the helm install
 [http://dashboard-staging.localhost:82/dashboard/](http://dashboard-staging.localhost:82/dashboard/)
 
+Test and deploy whoami 
+```
+kubectl apply -k apps/staging
+```
 
 ```
+curl http://whoami-staging.localhost:82
+```
+For to use fluxcd you need to fork this repo and 
+```
+export GITHUB_TOKEN=<token>
+export GITHUB_USER=<github-user>
 export GITHUB_REPO=flux-traefik-demo
 ```
 (also export token and user...)
