@@ -1,3 +1,13 @@
+# Flux traefik demo
+Demo of GitOps using [Flux](https://fluxcd.io/)
+
+## Prerequisites
+- local kubernetes cluster e.g. [k3d](https://k3d.io/)
+- kubectl [Install Tools](https://kubernetes.io/docs/tasks/tools/)
+- Helm [Installing Helm](https://helm.sh/docs/intro/install/)
+- Flux CLI [Install the Flux CLI](https://fluxcd.io/flux/installation/)
+
+## Demo 1 - Run image on kubernetes cluster using kubectl
 Create a local cluster using k3d
 ```
 k3d cluster create traefik-staging-demo \
@@ -32,13 +42,15 @@ kubectl apply -k apps/staging
 ```
 curl http://whoami-staging.localhost:82
 ```
+
+## Demo 2 - GitOps using Flux
 For to use fluxcd you need to fork this repo and 
+See [Flux bootstrap for GitHub](https://fluxcd.io/flux/installation/bootstrap/github/)
 ```
 export GITHUB_TOKEN=<token>
 export GITHUB_USER=<github-user>
 export GITHUB_REPO=flux-traefik-demo
 ```
-(also export token and user...)
 
 ### Bootstrap Flux staging
 ```
@@ -56,7 +68,7 @@ flux bootstrap github \
 curl http://whoami-staging.localhost:82
 ```
 
-## Production
+## Demo 3 - Add production cluster
 ```
 k3d cluster create traefik-demo \
   --port 80:80@loadbalancer \
@@ -94,7 +106,7 @@ flux bootstrap github \
 curl http://whoami.localhost
 ```
 
-#### Upgrade to new version of whoami
+## Demo 4 - Upgrade to new version of whoami
 change in apps/staging/whoami/whoami-patch.yaml
 ```
  image: traefik/traefikee-webapp-demo:v2
