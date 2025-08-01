@@ -2,7 +2,7 @@
 Demo of GitOps using [Flux](https://fluxcd.io/)
 
 [What is Flux CD?](https://www.cncf.io/blog/2023/09/15/what-is-flux-cd/)
-
+[What is GitOps? Youtube](https://www.youtube.com/watch?v=GlG6Xr2HH1g)
 [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 
 ## Prerequisites
