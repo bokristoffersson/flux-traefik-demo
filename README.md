@@ -43,7 +43,7 @@ flux bootstrap github \
 
 
 ```
-curl http://whoami-staging.localhost
+curl http://whoami-staging.localhost:82
 ```
 
 ## Production
