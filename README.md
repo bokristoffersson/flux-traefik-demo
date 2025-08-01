@@ -7,6 +7,8 @@ Demo of GitOps using [Flux](https://fluxcd.io/)
 - Helm [Installing Helm](https://helm.sh/docs/intro/install/)
 - Flux CLI [Install the Flux CLI](https://fluxcd.io/flux/installation/)
 
+If running on Windows it is recommended to use WSL [Install WSL on Windows](https://learn.microsoft.com/en-us/windows/wsl/install)
+
 ## Demo 1 - Run image on kubernetes cluster using kubectl
 Create a local cluster using k3d
 ```
