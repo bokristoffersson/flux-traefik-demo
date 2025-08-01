@@ -82,3 +82,12 @@ flux bootstrap github \
 ```
 curl http://whoami.localhost
 ```
+
+#### Upgrade to new version of whoami
+change in apps/staging/whoami/whoami-patch.yaml
+```
+ image: traefik/traefikee-webapp-demo:v2
+          args:
+            - -ascii
+            - -name=FOO
+```
