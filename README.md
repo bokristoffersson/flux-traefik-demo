@@ -116,3 +116,9 @@ change in apps/staging/whoami/whoami-patch.yaml
             - -ascii
             - -name=FOO
 ```
+
+## Clean
+Delete the created clusters
+```
+k3d cluster delete traefik-demo traefik-staging-demo
+```
