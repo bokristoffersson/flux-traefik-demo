@@ -47,6 +47,7 @@ curl http://whoami-staging.localhost:82
 ```
 
 ## Production
+```
 k3d cluster create traefik-demo \
   --port 80:80@loadbalancer \
   --port 443:443@loadbalancer \

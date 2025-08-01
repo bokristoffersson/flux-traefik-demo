@@ -8,3 +8,7 @@ spec:
     spec:
       containers:
         - name: whoami
+          image: traefik/traefikee-webapp-demo:v2
+          args:
+            - -ascii
+            - -name=FOO
