@@ -1,6 +1,8 @@
 # Flux traefik demo
 Demo of GitOps using [Flux](https://fluxcd.io/)
 
+[Kubernetes Documentation](https://kubernetes.io/docs/home/)
+
 ## Prerequisites
 - local kubernetes cluster e.g. [k3d](https://k3d.io/)
 - kubectl [Install Tools](https://kubernetes.io/docs/tasks/tools/)
