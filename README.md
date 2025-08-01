@@ -1,9 +1,9 @@
 Create a local cluster using k3d
 ```
 k3d cluster create traefik-staging-demo \
-  --port 80:80@loadbalancer \
-  --port 443:443@loadbalancer \
-  --port 8000:8000@loadbalancer \
+  --port 82:80@loadbalancer \
+  --port 445:443@loadbalancer \
+  --port 8002:8000@loadbalancer \
   --k3s-arg "--disable=traefik@server:0"
 ```
 
@@ -22,7 +22,7 @@ kubectl describe GatewayClass traefik
 ```
 
 Traefik dashboard is exposed by the helm install
-[http://dashboard-staging.localhost/dashboard/](http://dashboard-staging.localhost/dashboard/)
+[http://dashboard-staging.localhost:82/dashboard/](http://dashboard-staging.localhost:82/dashboard/)
 
 
 ```
